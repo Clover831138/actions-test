@@ -1,0 +1,14 @@
+name: hello
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: print
+        run: |
+          echo "runner is alive"
+          echo "host: $(hostname)"
+          echo "now: $(date -u +%FT%TZ)"
